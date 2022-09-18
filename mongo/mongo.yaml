@@ -17,8 +17,10 @@ spec:
       containers:
       - name: mongodb
         image: mongo
+        imagePullPolicy: Always
         ports:
         - containerPort: 27017
+          protocol: TCP
         env:
         - name: MONGO_INITDB_ROOT_USERNAME
           valueFrom:
